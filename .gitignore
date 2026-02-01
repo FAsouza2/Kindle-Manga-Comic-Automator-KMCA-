@@ -246,3 +246,15 @@ __marimo__/
 .gemini/skills/openspec-sync-specs/SKILL.md
 .gemini/skills/openspec-verify-change/SKILL.md
 openspec/config.yaml
+
+# KMCA - Pasta de arquivos processados
+Fonte/
+
+# KMCA - Arquivos de manga/comic (não versioná-los)
+*.pdf
+*.mobi
+*.azw3
+*.epub
+*.cbz
+*.cbr
+/openspec
