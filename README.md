@@ -43,6 +43,20 @@ Baixe e instale o UnRAR de https://www.rarlab.com/download.htm
 
 ## 💻 Como usar
 
+### Opção 1: Interface Gráfica (GUI) - Recomendado
+
+1. Execute o launcher gráfico:
+```bash
+python3 gui_launcher.py
+```
+
+2. Na interface:
+   - **Passo 1:** Clique em "Procurar..." e selecione a pasta com seus arquivos de manga
+   - **Passo 2:** Escolha o script "Conversor de Mangá" na lista
+   - **Passo 3:** Clique em "Rodar Script" e acompanhe o progresso no log
+
+### Opção 2: Linha de Comando (Terminal)
+
 1. Coloque o script `manga_converter.py` na pasta onde estão seus arquivos de manga/quadrinhos
 
 2. Execute o script:
@@ -51,7 +65,9 @@ Baixe e instale o UnRAR de https://www.rarlab.com/download.htm
 python3 manga_converter.py
 ```
 
-3. O script irá:
+### O que acontece durante a conversão
+
+O script irá:
    - Identificar todos os arquivos suportados na pasta
    - Criar uma pasta "Fonte"
    - Para cada arquivo:
@@ -60,11 +76,36 @@ python3 manga_converter.py
      - Extrair todas as imagens
      - Criar um arquivo CBZ na pasta raiz
 
+## ⚙️ Adicionando novos scripts
+
+Você pode adicionar seus próprios scripts Python ao launcher editando o arquivo `scripts_config.json`:
+
+```json
+{
+  "scripts": [
+    {
+      "name": "Nome do Script",
+      "description": "Descrição detalhada do que o script faz",
+      "file": "caminho/do/script.py",
+      "module": "nome_do_modulo",
+      "class": "NomeDaClasse"
+    }
+  ]
+}
+```
+
+**Requisitos para scripts compatíveis:**
+- O script deve ter uma classe com método `__init__(self, working_dir: str)`
+- A classe deve ter um método `run(self)` que executa a lógica principal
+- Use `print()` para mostrar progresso no log da GUI
+
 ## 📁 Estrutura final
 
 ```
 pasta-manga/
-├── manga_converter.py
+├── gui_launcher.py           # Interface gráfica
+├── manga_converter.py        # Script de conversão
+├── scripts_config.json       # Configuração de scripts
 ├── Fonte/
 │   ├── Naruto Volume 01/
 │   │   ├── Naruto Volume 01.pdf    # arquivo original

@@ -1,0 +1,11 @@
+{
+  "scripts": [
+    {
+      "name": "Conversor de Mangá",
+      "description": "Converte arquivos de manga/comic (PDF, MOBI, EPUB, CBZ, CBR) para CBZ otimizado para Kindle.\n\nFormatos suportados:\n- PDF\n- MOBI/AZW3\n- EPUB\n- CBZ/CBR\n\nO script processa todos os arquivos suportados no diretório selecionado.",
+      "file": "manga_converter.py",
+      "module": "manga_converter",
+      "class": "MangaConverter"
+    }
+  ]
+}
