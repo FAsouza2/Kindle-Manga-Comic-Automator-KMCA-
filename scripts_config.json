@@ -6,6 +6,13 @@
       "file": "manga_converter.py",
       "module": "manga_converter",
       "class": "MangaConverter"
+    },
+    {
+      "name": "Capítulos → Volumes CBZ",
+      "description": "Converte capítulos de mangá separados em volumes consolidados (CBZ).\n\n⚠️ AVISO: Este script é DESTRUTIVO!\n\nO que faz:\n✓ Renomeia imagens para evitar conflitos\n✓ Consolida capítulos em volumes\n✓ Cria arquivos CBZ por volume\n✗ DELETA pastas de capítulos originais\n\nEstrutura esperada:\n  Vol.01 Ch.0001 - Título/\n    01.jpg, 02.jpg, ...\n  Vol.01 Ch.0002 - Título/\n    01.jpg, 02.jpg, ...\n  Vol.02 Ch.0006 - Título/\n    01.jpg, 02.jpg, ...\n\nResultado:\n  Volume 01.cbz\n  Volume 02.cbz\n  ...\n\n🔴 IMPORTANTE: FAÇA BACKUP antes de executar!",
+      "file": "manga_chapter_volume_wrapper.py",
+      "module": "manga_chapter_volume_wrapper",
+      "class": "MangaChapterVolumeConverter"
     }
   ]
 }
